@@ -20,12 +20,15 @@ struct LaunchesView: View {
                     }
                     .padding()
                     VStack {
-                        Text(launches.launchesID)
+                        Text(launches.webcast)
                         Text(launches.name)
+                    }
+                    NavigationLink(destination: LaunchesDetailView()){
+                        
                     }
                 }
                 
-            }.navigationTitle(Text("Launches"))
+            }.navigationTitle(Text("All Launches"))
         }.task {
             await launchesListViewModel.getLaunchesViewModel(url: URL(string: "https://api.spacexdata.com/v4/launches")!)
         }

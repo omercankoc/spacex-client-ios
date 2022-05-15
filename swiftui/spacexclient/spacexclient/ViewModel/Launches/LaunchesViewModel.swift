@@ -26,10 +26,6 @@ struct LaunchesViewModel {
         launches.launchesID ?? ""
     }
     
-    var flightNumber : Int {
-        launches.flightNumber ?? 0
-    }
-    
     var name : String {
         launches.name ?? ""
     }
@@ -42,11 +38,11 @@ struct LaunchesViewModel {
         launches.date ?? ""
     }
     
-    var success : Bool {
-        launches.success ?? false
-    }
-     
     var links : String {
         launches.links?.patch?.small ?? ""
+    }
+    
+    var webcast : String {
+        launches.links?.webcast ?? ""
     }
 }
